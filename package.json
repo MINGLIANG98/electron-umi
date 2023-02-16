@@ -1,0 +1,58 @@
+{
+  "private": true,
+  "author": "guojun <guojun@wisdomopen.com>",
+  "version": "1.1.0",
+  "name": "cabron",
+  "homepage": "./",
+  "main": "build/main.js",
+  "build": {
+    "appId": "carbonApp",
+    "productName": "碳足迹追溯",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "./public/logo.jpg"
+    },
+    "files": [
+      "build/**/*"
+    ],
+    "extends": null
+  },
+  "scripts": {
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "dev": "umi dev",
+    "web-build": "umi build",
+    "web-start": "cross-env NODE_ENV=development npm run dev",
+    "electron-start": "cross-env NODE_ENV=development electron public/main.js",
+    "electron-start:production": "cross-env NODE_ENV=production electron build/main.js",
+    "electron-trace": "electron --trace-warnings .",
+    "build": "npm run web-build && electron-builder --win --x64",
+    "start": "concurrently  \"npm run web-start\"   \"wait-on http://localhost:9080 && npm run electron-start\" ",
+    "start:pro": "npm run web-build && npm run electron-start:production"
+  },
+  "dependencies": {
+    "@ant-design/pro-components": "^2.3.47",
+    "@electron/remote": "^2.0.8",
+    "antd": "^5.0.2",
+    "antd-img-crop": "^4.5.1",
+    "lodash": "^4.17.21",
+    "qrcode.react": "^3.1.0",
+    "react-to-print": "^2.14.10",
+    "umi": "^4.0.28"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@umijs/fabric": "^3.0.0",
+    "@umijs/plugins": "^4.0.28",
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "electron": "^21.3.1",
+    "electron-builder": "^23.6.0",
+    "typescript": "^4.1.2",
+    "wait-on": "^6.0.1"
+  }
+}

@@ -1,0 +1,31 @@
+.modal {
+  :global {
+    .ant-modal-body {
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 6px;
+      }
+      // 滚动条背景色
+      &::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+        border-radius: 2px;
+      }
+      // 滚动条颜色
+      &::-webkit-scrollbar-thumb {
+        // background: #bfbfbf;
+        background: rgba(75, 75, 75, 0.171);
+        border-radius: 3px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #ccc;
+      }
+    }
+  }
+}
+
+.icon {
+  color: #36b086;
+  vertical-align: baseline;
+}
+.icontxt {
+}

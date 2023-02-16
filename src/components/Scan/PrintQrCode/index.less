@@ -1,0 +1,52 @@
+.Box {
+  @media all {
+    // .page-break {
+    //     display: none;
+    // }
+    // .logobox {
+    //     vertical-align: middle;
+    //     margin: 0 auto;
+    //     text-align: center;
+    // }
+    // 文本
+    // .msg{
+    //     // display: inline-block;
+    //     width: 100%;
+    //     text-align: center;
+    //     word-break: break-all;
+    // }
+  }
+
+  @media print {
+    html,
+    body {
+      height: initial !important;
+      overflow: initial !important;
+      -webkit-print-color-adjust: exact;
+    }
+
+    // 分页符/ 一页
+    .page-break {
+      margin: 0 auto;
+      margin-top: 1rem;
+      display: block;
+      page-break-before: auto;
+    }
+  }
+  // 纸张样式
+  @page {
+    //  指定纵向之后不可修改
+    // size: portrait;
+    size: auto;
+    // 去除页眉页脚
+    margin: 0 0;
+    padding: 0;
+    // position: relative;
+  }
+  // .page-break {
+  //     position: absolute;
+  //     top: 0;
+  //     bottom: 0;
+  //     margin: auto;
+  // }
+}

@@ -1,0 +1,78 @@
+.innerCard {
+    height: 75vh;
+    :global {
+        .ant-card-body {
+            height: calc(100% - 48px);
+        }
+    }
+    .desc {
+        height: 100%;
+        position: relative;
+        :global {
+            .ant-form-item {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .edit {
+        height: 100%;
+        position: relative;
+    }
+}
+.pic {
+    display: flex !important;
+    justify-content: center;
+    :global {
+        .ant-upload-select,
+        .ant-upload-list-picture-card,
+        .ant-upload-list-picture-card-container,
+        .ant-upload-list-item-container,
+        .ant-upload-select-picture-card {
+            min-height: 300px !important;
+            width: 100% !important;
+        }
+    }
+}
+.scanWrapper {
+    padding: 0 10%;
+    position: relative;
+    height: 466px;
+    .scanButton {
+        width: 60%;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 10px;
+        // margin-top: 100px;
+        position: absolute;
+        bottom: 0px;
+    }
+}
+
+.submit {
+    width: 40%;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+}
+.printSubmit{
+    button{
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+    position: absolute;
+    bottom: 0px;
+}
+.tab {
+    :global {
+        .ant-tabs-nav {
+            display: none;
+        }
+        .ant-tabs-content-holder {
+            border: none;
+        }
+    }
+}

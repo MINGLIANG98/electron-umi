@@ -1,0 +1,62 @@
+.list {
+  :global {
+    // 一行一个
+    // .selectRowItem {
+    //   background-color: #00bab5 !important;
+    //   .ant-pro-list-row-content {
+    //     flex: 3 !important;
+    //   }
+    // }
+    // 一行多个样式
+    .selectRowItems {
+      & > div {
+        background-color: @primary-color !important;
+        .hover;
+      }
+    }
+    .ant-avatar-circle {
+      width: 50px !important;
+      height: 50px !important;
+    }
+    // 横向滚动条时候 record card宽度只有视口大小
+    .ant-list-items {
+      min-width: fit-content;
+    }
+  }
+}
+.hover {
+  border-color: transparent;
+  box-shadow: 0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.singleList {
+  :global {
+    // 横向滚动条时候 record card宽度只有视口大小
+    .ant-list-items {
+      min-width: fit-content;
+    }
+    // 一行一个
+    .selectRowItem {
+      background-color: @primary-color !important;
+      .hover;
+    }
+    .ant-pro-list-row-content {
+      flex: 20 !important;
+    }
+    .ant-avatar-circle {
+      width: 50px !important;
+      height: 50px !important;
+    }
+    .ant-list-item,
+    .ant-pro-list-row {
+      margin: 10px 0;
+      border: 1px solid rgba(5, 5, 5, 0.06);
+      border-radius: 5px;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        .hover;
+      }
+    }
+  }
+}
